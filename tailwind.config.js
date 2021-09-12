@@ -11,6 +11,8 @@ module.exports = {
       black: colors.black,
       white: colors.white,
       gray: colors.trueGray,
+      cyan: colors.cyan,
+      sky: colors.sky,
       indigo: {
         light: '#966EFF',
         DEFAULT: '#966EFF',
