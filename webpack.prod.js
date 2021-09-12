@@ -39,5 +39,31 @@ module.exports = merge(common, {
         useShortDoctype: true
       },
     }),
+
+    new HtmlWebpackPlugin({
+      filename: 'privacy.html',
+      template: 'src/html/privacy.html',
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true
+      },
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: 'terms.html',
+      template: 'src/html/terms.html',
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true
+      },
+    }),
   ],
 });
