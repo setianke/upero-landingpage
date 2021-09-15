@@ -63,8 +63,8 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      filename: 'terms.html',
-      template: 'src/html/terms.html'
+      filename: 'imprint.html',
+      template: 'src/html/imprint.html'
     }),
 
     new CopyPlugin({

@@ -54,8 +54,8 @@ module.exports = merge(common, {
     }),
 
     new HtmlWebpackPlugin({
-      filename: 'terms.html',
-      template: 'src/html/terms.html',
+      filename: 'imprint.html',
+      template: 'src/html/imprint.html',
       minify: {
         collapseWhitespace: true,
         removeComments: true,
