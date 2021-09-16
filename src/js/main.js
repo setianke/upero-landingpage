@@ -61,12 +61,6 @@ class Carousel {
     this.updateGallery();
   }
 
-  setControls() {
-    this.carouselControls.forEach(control => {
-      galleryControlsContainer.appendChild(document.createElement('button')).className = `gallery-controls-${control}`;
-    });
-  }
-
   useControls() {
     const triggers = [...galleryControlsContainer.childNodes];
 
@@ -78,6 +72,5 @@ class Carousel {
     });
   }
 }
-const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
-exampleCarousel.setControls();
-exampleCarousel.useControls();
+const brandCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
+brandCarousel.useControls();
