@@ -1,5 +1,7 @@
 import '../sass/styles.sass';
 
+let volumeOn = false;
+
 function appendSource(device, format, type) {
   const source = document.createElement('source');
   source.src = '/assets/videos/video-' + device + '.' + format;
@@ -10,6 +12,19 @@ function appendSource(device, format, type) {
 function appendPoster(device) {
   document.getElementById('home-video').setAttribute('poster', '/assets/images/poster-' + device + '.jpg');
 }
+
+document.getElementById('muter').addEventListener('click', e => {
+  if (volumeOn) {
+    document.getElementById('icon-volume-on').style.display = 'none';
+    document.getElementById('icon-volume-off').style.display = 'block';
+    document.getElementById('home-video').muted = true;
+  } else {
+    document.getElementById('icon-volume-on').style.display = 'block';
+    document.getElementById('icon-volume-off').style.display = 'none';
+    document.getElementById('home-video').muted = false;
+  }
+  volumeOn = !volumeOn;
+});
 
 if (window.innerWidth <= 500) {
   appendPoster('mobile');
@@ -47,7 +62,7 @@ class Carousel {
     });
 
     this.carouselArray.slice(0, 5).forEach((el, i) => {
-      el.classList.add(`gallery-item-${i+1}`);
+      el.classList.add(`gallery-item-${i + 1}`);
     });
   }
 
@@ -72,5 +87,6 @@ class Carousel {
     });
   }
 }
+
 const brandCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
 brandCarousel.useControls();
